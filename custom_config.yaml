@@ -53,6 +53,9 @@ monitors:
 
   - type: ecs-metadata
     intervalSeconds: 1
+    metadataEndpoint: "${env:ECS_TASK_METADATA_ENDPOINT}"
+    statsEndpoint: "${env:ECS_TASK_STATS_ENDPOINT}"
+    excludedImages: "${env:ECS_METADATA_EXCLUDED_IMAGES}"
 
     # You can set this envvar in your task definition to provide extra monitor
     # configuration to monitor applications running as ECS tasks.  You should
