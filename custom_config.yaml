@@ -50,7 +50,8 @@ monitors:
   - type: docker-container-stats
     labelsToDimensions:
       <<: *labelMap
-
+  - type: collectd/ecs
+  
   - type: ecs-metadata
     intervalSeconds: 1
     metadataEndpoint: "${env:ECS_TASK_METADATA_ENDPOINT}"
